@@ -6,15 +6,14 @@ from django.utils import timezone
 class producto(models.Model):
     nombre = models.CharField(max_length=200)
     modelo = models.CharField(max_length=200)
-    unidades = models.CharField(max_length=200)
-    precio = models.CharField(max_length=200)
-    detalles = models.TextField()
-
+    unidades = models.IntegerField()
+    precio = models.IntegerField()
+    detalles = models.CharField(max_length=200)
 
 class marca(models.Model):
-    marca = models.TextField()
+    nombre = models.CharField(max_length=200)
 
 class compra(models.Model):
-    unidades = models.IntegerField
-    importe = models.IntegerField
-    fecha = models.DateTimeField(default=timezone.now)
+    unidades = models.CharField(max_length=200)
+    importe = models.CharField(max_length=200)
+    fecha = models.CharField(max_length=200)
