@@ -25,3 +25,6 @@ class compra(models.Model):
     importe = models.DecimalField(max_digits=12, decimal_places=2)
     fecha = models.DateTimeField(default=timezone.now)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return '{} {}'.format(self.producto, self.unidades)
