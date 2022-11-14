@@ -3,21 +3,25 @@ from django.db import models
 from django.utils import timezone
 # Create your models here.
 class marca(models.Model):
-    nombre = models.CharField(max_length=200, primary_key='true')
+    nombre = models.CharField(max_length=200, unique='True')
 
+    def __str__(self):
+        return self.nombre
 class producto(models.Model):
-    nombre = models.CharField(max_length=200)
-    modelo = models.CharField(max_length=200)
-    unidades = models.IntegerField()
-    precio = models.IntegerField()
-    detalles = models.CharField(max_length=200)
-    marca = models.ForeignKey(marca, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=50)
+    modelo = models.CharField(max_length=50)
+    unidades = models.PositiveIntegerField()
+    precio = models.DecimalField(max_digits=12, decimal_places=2)
+    detalles = models.CharField(max_length=200, blank=True)
+    marca = models.ForeignKey(marca, models.PROTECT)
 
     def __str__(self):
         return '{} {}'.format(self.nombre, self.marca)
 
 
 class compra(models.Model):
-    unidades = models.CharField(max_length=200)
-    importe = models.CharField(max_length=200)
-    fecha = models.CharField(max_length=200)
+    producto = models.ForeignKey(producto, models.PROTECT)
+    unidades = models.PositiveIntegerField()
+    importe = models.DecimalField(max_digits=12, decimal_places=2)
+    fecha = models.DateTimeField(default=timezone.now)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)

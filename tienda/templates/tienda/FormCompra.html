@@ -1,0 +1,38 @@
+{%  extends 'tienda/base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            Comprar el producto
+        </div>
+        <div class="card-body">
+            <h4 class="card-title"> Datos del producto</h4>
+
+            <form enctype="multipart/form-data" method="post">
+
+                {%  csrf_token %}
+
+                    {% for i in formulario %}
+                    {%  if i.name == 'nombre' or i.name == 'unidades'  %}
+                        <div class="mb-3">
+                            <label for="" class="form-label">{{ i.label }}:</label>
+                            <input
+                                type="{{ i.field.widget.input_type }}"
+                                class="form-control"
+                                name="{{ i.name }}"
+                                id=""
+                                aria-describedby="helpId"
+                                placeholder="{{ i.label }}"
+                                value="{{ i.value | default:'' }}"/>
+                        </div>
+                    <div class="col-12 help-text">{{ i.errors }}</div>
+                    {% endif %}
+                {% endfor %}
+
+                <input name="" id="" class="btn btn-success" type="submit" value="Comprar">
+                <a name="" id="" class="btn btn-primary" href="{%  url 'compra' %}" role="button"> Cancelar</a>
+            </form>
+        </div>
+
+    </div>
+{% endblock %}

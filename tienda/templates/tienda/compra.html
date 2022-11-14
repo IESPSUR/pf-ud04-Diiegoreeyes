@@ -1,9 +1,8 @@
-{% extends 'tienda/base.html' %}
+{%  extends 'tienda/listado.html' %}
+
 {% block content %}
     <div class="card">
-        <div class="card-header">
-            <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar producto</a>
-        </div>
+
         <table class="table">
             <thead>
                 <tr>
@@ -25,9 +24,7 @@
                   <td>{{ i.unidades }}</td>
                   <td>{{ i.precio }}€</td>
                   <td>
-                      <a class="btn btn-info" href="{% url 'editar' i.id %}" role="button">Editar</a>
-                      |
-                       <a class="btn btn-danger" href="{%  url 'eliminar' i.id %}" role="button">Borrar</a>
+                      <a name="" id="" class="btn btn-success" href="{%  url 'formcompra' i.id %}" role="button"> Comprar</a>
                   </td>
                 </tr>
 
