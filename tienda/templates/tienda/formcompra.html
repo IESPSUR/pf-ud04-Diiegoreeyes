@@ -13,17 +13,11 @@
                 {%  csrf_token %}
 
                     {% for i in formulario %}
-                    {%  if i.name == 'nombre' or i.name == 'unidades'  %}
-                        <div class="mb-3">
-                            <label for="" class="form-label">{{ i.label }}:</label>
-                            <input
-                                type="{{ i.field.widget.input_type }}"
-                                class="form-control"
-                                name="{{ i.name }}"
-                                id=""
-                                aria-describedby="helpId"
-                                placeholder="{{ i.label }}"
-                                value="{{ i.value | default:'' }}"/>
+                    {%  if i.name == 'unidades'  %}
+                       <div class="mb-3">
+                           <p>El Producto tiene {{ i.value }} unidades</p>
+                           <label>¿Cuántas unidades quieres comprar?</label>
+                           <input class="form-control"/>
                         </div>
                     <div class="col-12 help-text">{{ i.errors }}</div>
                     {% endif %}

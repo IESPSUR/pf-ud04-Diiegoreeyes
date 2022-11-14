@@ -13,17 +13,16 @@ def listado(request):
     return render(request,'tienda/listado.html', {'listadoprod':listadoprod})
 
 def compra(request):
-    productocompra = marca.objects.all()
+    productocompra = producto.objects.all()
     return render(request,'tienda/compra.html', {'productocompra':productocompra})
 
 def formcompra(request, id):
-    Compra = producto.objects.get(id=id)
-    formulario = CompraForm(request.POST or None, request.FILES or None, instance=Compra)
+    Producto = producto.objects.get(id=id)
+    formulario = ProductoForm(request.POST or None, request.FILES or None, instance=Producto)
     if formulario.is_valid() and request.POST:
         formulario.save()
-        return redirect('formcompra')
+        return redirect('listado')
     return render(request,'tienda/formcompra.html', {'formulario':formulario})
-
 @staff_member_required
 def crear(request):
     formulario = ProductoForm(request.POST or None, request.FILES or None)
