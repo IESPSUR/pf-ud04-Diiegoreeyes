@@ -6,7 +6,6 @@ class ProductoForm(forms.ModelForm):
         model = producto
         fields = '__all__'
 
-class CompraForm(forms.ModelForm):
-    class Meta:
-        model = compra
-        fields = '__all__'
+
+class CompraForm(forms.Form):
+    cantidad = forms.IntegerField(required=True)

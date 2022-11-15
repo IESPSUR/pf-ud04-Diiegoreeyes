@@ -1,5 +1,5 @@
 from django.contrib.admin.views.decorators import staff_member_required
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import *
 from .forms import ProductoForm, CompraForm
 
@@ -17,12 +17,18 @@ def compra(request):
     return render(request,'tienda/compra.html', {'productocompra':productocompra})
 
 def formcompra(request, id):
-    Producto = producto.objects.get(id=id)
-    formulario = ProductoForm(request.POST or None, request.FILES or None, instance=Producto)
-    if formulario.is_valid() and request.POST:
-        formulario.save()
-        return redirect('listado')
+    Producto = get_object_or_404(producto, id=id)
+    formulario = CompraForm(request.POST)
+    if request.method == 'POST':
+        if formulario.is_valid():
+            cantidad = formulario.cleaned_data['cantidad']
+            if (Producto.unidades > cantidad):
+                Producto.unidades = Producto.unidades - cantidad
+                Producto.save()
+                return redirect('compra')
     return render(request,'tienda/formcompra.html', {'formulario':formulario})
+
+# CRUD #
 @staff_member_required
 def crear(request):
     formulario = ProductoForm(request.POST or None, request.FILES or None)
