@@ -2,22 +2,30 @@
 
     {%  csrf_token %}
 
-    {% for i in formulario %}
+  {% for i in formulario %}
 
-    <div class="mb-3">
-        <label for="" class="form-label">{{ i.label }}:</label>
-        <input
-            type="{{ i.field.widget.input_type }}"
-            class="form-control"
-            name="{{ i.name }}"
-            id=""
-            aria-describedby="helpId"
-            placeholder="{{ i.label }}"
-            value="{{ i.value | default:'' }}"/>
-    </div>
-    <div class="col-12 help-text">{{ i.errors }}</div>
-    {% endfor %}
+                {% if i.name != 'marca' %}
+                    <div class="mb-3">
+                        <label for="" class="form-label">{{ i.label }}:</label>
 
+                        <input
+                            type="{{ i.field.widget.input_type }}"
+                            class="form-control"
+                            name="{{ i.name }}"
+                            id=""
+                            aria-describedby="helpId"
+                            placeholder="{{ i.label }}"
+                            value="{{ i.value | default:'' }}"/>
+                    </div>
+                    <div class="col-12 help-text">{{ i.errors }}</div>
+                {% endif %}
+                {% if i.name == 'marca' %}
+                    <label for="" class="form-label">{{ i.label }}:</label>
+                    {{ formulario.marca }}
+                {% endif %}
+
+            {% endfor %}
+            <br></br>
     <input name="" id="" class="btn btn-success" type="submit" value="Enviar Información">
     <a name="" id="" class="btn btn-primary" href="{%  url 'listado' %}" role="button"> Cancelar</a>
 </form>

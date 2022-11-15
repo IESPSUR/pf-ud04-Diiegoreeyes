@@ -11,7 +11,7 @@ class producto(models.Model):
     nombre = models.CharField(max_length=50)
     modelo = models.CharField(max_length=50)
     unidades = models.PositiveIntegerField()
-    precio = models.DecimalField(max_digits=12, decimal_places=2)
+    precio = models.IntegerField()
     detalles = models.CharField(max_length=200, blank=True)
     marca = models.ForeignKey(marca, models.PROTECT)
 
