@@ -1,0 +1,29 @@
+{% extends 'tienda/base.html' %}
+{% block content %}
+    <h2>Mejores clientes</h2>
+    <form method="get">
+        {{ formulario }}
+    </form>
+    {% if Clientes %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Compras</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in Clientes %}
+                <tr>
+                    <td>
+                        {{ i.username }}
+                    </td>
+                    <td>
+                        {{ i.emailast_name }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

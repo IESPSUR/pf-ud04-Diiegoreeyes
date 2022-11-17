@@ -11,4 +11,11 @@ urlpatterns = [
     path('tienda/admin/editar/<int:id>', views.editar, name='editar'),
     path('tienda/formcompra/<int:id>', views.formcompra, name='formcompra'),
     path('tienda/listacompra',views.listacompra, name='listacompra'),
+    path('tienda/informes', views.informes, name='informes'),
+    path('tienda/informes/listado_marca', views.listado_marca, name='listado_marca'),
+    path('tienda/informes/listado_usuario', views.listado_usuario, name='listado_usuario'),
+    path('tienda/informes/toptenproductos', views.toptenproductos, name='toptenproductos'),
+    path('tienda/informes/toptenclientes', views.toptenclientes, name='toptenclientes'),
+
+
 ]

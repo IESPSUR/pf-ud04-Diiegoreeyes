@@ -1,0 +1,38 @@
+{% extends 'tienda/base.html' %}
+{% block content %}
+    <h2>Productos por marca</h2>
+    <form method="get">
+        {{ formulario }}
+        <input type="submit" value="Consultar">
+    </form>
+    {% if compras %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Fecha</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in compras %}
+                <tr>
+                    <td>
+                        {{ i.producto}}
+                    </td>
+                    <td>
+                        {{ i.fecha }}
+                    </td>
+                    <td>
+                        {{ i.importe }}€
+                    </td>
+                    <td>
+                        {{ i.unidades }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

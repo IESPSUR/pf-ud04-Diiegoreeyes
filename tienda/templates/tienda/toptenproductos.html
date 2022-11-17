@@ -1,0 +1,37 @@
+{% extends 'tienda/base.html' %}
+{% block content %}
+    <h2>Productos más vendidos</h2>
+    <form method="get">
+        {{ formulario }}
+    </form>
+    {% if Productos %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Modelo</th>
+                    <th>Precio</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for i in Productos %}
+                <tr>
+                    <td>
+                        {{ i.nombre}}
+                    </td>
+                    <td>
+                        {{ i.modelo }}
+                    </td>
+                    <td>
+                        {{ i.precio }}€
+                    </td>
+                    <td>
+                        {{ sum_ventas }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+{% endblock %}

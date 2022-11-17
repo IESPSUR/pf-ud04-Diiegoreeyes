@@ -1,12 +1,14 @@
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.db import transaction
 from datetime import datetime
 from django.shortcuts import render,redirect,get_object_or_404
+from django.db.models import Sum,Count
 
 from . import forms
 from .models import *
-from .forms import ProductoForm, CompraForm
+from .forms import ProductoForm, CompraForm, MarcaForm,PersonaForm
 
 
 # Create your views here.
@@ -80,3 +82,52 @@ def eliminar(request, id):
     Producto = producto.objects.get(id=id)
     Producto.delete()
     return redirect('listado')
+
+
+def listado_marca(request):
+
+    marca = request.GET.get('marca')
+
+    if marca:
+
+        formulario = MarcaForm(request.GET)
+        Productos = producto.objects.all().filter(marca=marca)
+        contexto = {'Productos':Productos, 'formulario':formulario}
+
+    else:
+        formulario = MarcaForm()
+        contexto = {'formulario': formulario}
+    return render(request, 'tienda/listado_marca.html', contexto)
+
+def listado_usuario(request):
+
+    username = request.GET.get('user')
+
+    if username:
+
+        formulario = PersonaForm(request.GET)
+        compras = compra.objects.all().filter(user=request.user)
+        contexto = {'compras':compras, 'formulario':formulario}
+
+    else:
+
+        formulario = PersonaForm()
+        contexto = {'formulario': formulario}
+
+    return render(request, 'tienda/listado_usuario.html', contexto)
+
+def informes(request):
+    return render(request,'tienda/informes.html', {})
+
+def toptenproductos(request):
+
+    Productos = producto.objects.annotate(sum_ventas=Sum('compra__unidades'),
+                                          sum_importes=Sum('compra__importe')).order_by('-sum_ventas')[:10]
+    return render(request, 'tienda/toptenproductos.html', {'Productos':Productos})
+
+
+def toptenclientes(request):
+    Clientes = User.objects.annotate(importe_compras=Sum('compra__importe'),
+                                     total_compras=Count('compra')).order_by('-importe_compras')[:3]
+    print(Clientes.query)
+    return render(request, 'tienda/toptenclientes.html', {'Clientes': Clientes})
