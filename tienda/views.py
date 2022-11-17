@@ -1,5 +1,10 @@
 from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
+from django.db import transaction
+from datetime import datetime
 from django.shortcuts import render,redirect,get_object_or_404
+
+from . import forms
 from .models import *
 from .forms import ProductoForm, CompraForm
 
@@ -12,21 +17,48 @@ def listado(request):
     listadoprod = producto.objects.all()
     return render(request,'tienda/listado.html', {'listadoprod':listadoprod})
 
-def compra(request):
+def listacompra(request):
     productocompra = producto.objects.all()
     return render(request,'tienda/compra.html', {'productocompra':productocompra})
 
+
+def validationerror(param):
+    pass
+
+
+@transaction.atomic
+@login_required
 def formcompra(request, id):
+
     Producto = get_object_or_404(producto, id=id)
+
+    unidades = request.GET.get('unidades')
+    #total = Producto.precio * int(unidades)
+
     formulario = CompraForm(request.POST)
+    idprod = Producto.id
+
+    formprod = producto.objects.all()
+
+
     if request.method == 'POST':
+
         if formulario.is_valid():
             cantidad = formulario.cleaned_data['cantidad']
+
             if (Producto.unidades > cantidad):
                 Producto.unidades = Producto.unidades - cantidad
                 Producto.save()
-                return redirect('compra')
-    return render(request,'tienda/formcompra.html', {'formulario':formulario})
+
+                Compra = compra(producto=Producto,
+                                unidades=cantidad,
+                                importe=cantidad*Producto.precio,
+                                fecha = datetime.now().date(),
+                                user=request.user)
+
+                Compra.save()
+                return redirect('listacompra')
+    return render(request,'tienda/formcompra.html', {'formulario':formulario, 'formprod':formprod, 'idprod':idprod})
 
 # CRUD #
 @staff_member_required

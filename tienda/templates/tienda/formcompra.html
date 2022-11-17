@@ -5,22 +5,45 @@
         <div class="card-header">
             Comprar el producto
         </div>
+
         <div class="card-body">
             <h4 class="card-title"> Datos del producto</h4>
+
+             <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Marca</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for j in formprod %}
+                    {% if idprod == j.id %}
+                    <tr>
+                        <td>{{ j.nombre }}</td>
+                        <td>{{ j.marca }}</td>
+                        <td>{{ j.unidades }}</td>
+                        <td>{{ j.precio }}€</td>
+                    </tr>
+
+                    {% endif %}
+                {%  endfor %}
+            </tbody>
+        </table>
 
                        <div class="mb-3">
                            <form method="post">
                                {% csrf_token %}
+
                                {{ formulario }}
-                               </br>
                                 <input name="" id="" class="btn btn-success" type="submit" value="Comprar">
-                                <a name="" id="" class="btn btn-primary" href="{%  url 'compra' %}" role="button"> Cancelar</a>
+                                <a name="" id="" class="btn btn-primary" href="{%  url 'listacompra' %}" role="button"> Cancelar</a>
                            </form>
 
                         </div>
-                    <div class="col-12 help-text">{{ i.errors }}</div>
-
-
         </div>
 
     </div>
