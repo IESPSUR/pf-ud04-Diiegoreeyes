@@ -32,20 +32,17 @@ def formcompra(request, id):
 
     Producto = get_object_or_404(producto, id=id)
 
-    unidades = request.GET.get('unidades')
-    #total = Producto.precio * int(unidades)
-
     formulario = CompraForm(request.POST)
     idprod = Producto.id
 
     formprod = producto.objects.all()
 
-
+    total=0
     if request.method == 'POST':
 
         if formulario.is_valid():
             cantidad = formulario.cleaned_data['cantidad']
-
+            total = Producto.precio * int(cantidad)
             if (Producto.unidades > cantidad):
                 Producto.unidades = Producto.unidades - cantidad
                 Producto.save()
@@ -58,7 +55,7 @@ def formcompra(request, id):
 
                 Compra.save()
                 return redirect('listacompra')
-    return render(request,'tienda/formcompra.html', {'formulario':formulario, 'formprod':formprod, 'idprod':idprod})
+    return render(request,'tienda/formcompra.html', {'formulario':formulario, 'formprod':formprod, 'idprod':idprod,'total':total})
 
 # CRUD #
 @staff_member_required
