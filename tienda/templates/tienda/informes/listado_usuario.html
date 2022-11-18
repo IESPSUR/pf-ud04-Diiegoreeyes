@@ -1,6 +1,6 @@
 {% extends 'tienda/base.html' %}
 {% block content %}
-    <h2>Productos por marca</h2>
+    <h2>Listado de compras de usuario</h2>
     <form method="get">
         {{ formulario }}
         <input type="submit" value="Consultar">
@@ -16,19 +16,19 @@
                 </tr>
             </thead>
             <tbody>
-            {% for i in compras %}
+            {% for compra in compras %}
                 <tr>
                     <td>
-                        {{ i.producto}}
+                        {{ compra.producto}}
                     </td>
                     <td>
-                        {{ i.fecha }}
+                        {{ compra.fecha }}
                     </td>
                     <td>
-                        {{ i.importe }}€
+                        {{ compra.importe }}€
                     </td>
                     <td>
-                        {{ i.unidades }}
+                        {{ compra.unidades }}
                     </td>
                 </tr>
             {% endfor %}

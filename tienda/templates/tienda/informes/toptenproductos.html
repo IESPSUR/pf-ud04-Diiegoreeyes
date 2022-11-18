@@ -9,28 +9,33 @@
             <thead>
                 <tr>
                     <th>Producto</th>
-                    <th>Modelo</th>
-                    <th>Precio</th>
+                    <th>Unidades Vendidas</th>
                     <th>Total</th>
                 </tr>
             </thead>
             <tbody>
-            {% for i in Productos %}
+            {% for Producto in unidadesvendidas %}
                 <tr>
+
                     <td>
-                        {{ i.nombre}}
+                        {% for producto in Productos %}
+                            {% if producto.id == Producto.producto %}
+                                {{ producto.nombre }}
+                            {% endif %}
+                        {% endfor %}
                     </td>
                     <td>
-                        {{ i.modelo }}
+                            {{ Producto.sum_compras}}
                     </td>
+
                     <td>
-                        {{ i.precio }}€
+                        {{ Producto.total}}€
                     </td>
-                    <td>
-                        {{ sum_ventas }}
-                    </td>
+
                 </tr>
             {% endfor %}
+
+
             </tbody>
         </table>
     {% endif %}

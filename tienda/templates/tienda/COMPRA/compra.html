@@ -1,6 +1,7 @@
-{%  extends 'tienda/listado.html' %}
+{%  extends 'tienda/CRUD/../listado.html' %}
 
 {% block content %}
+
     <div class="card">
 
         <table class="table">
@@ -15,14 +16,14 @@
             </thead>
             <tbody>
 
-                {% for i in productocompra %}
+                {% for producto in productocompra %}
                 <tr>
-                  <td>{{ i.id }}</td>
-                  <td>{{ i.nombre }}</td>
-                  <td>{{ i.unidades }}</td>
-                  <td>{{ i.precio }}€</td>
+                  <td>{{ producto.id }}</td>
+                  <td>{{ producto.nombre }}</td>
+                  <td>{{ producto.unidades }}</td>
+                  <td>{{ producto.precio }}€</td>
                   <td>
-                      <a name="" id="" class="btn btn-success" href="{%  url 'formcompra' i.id %}" role="button"> Comprar</a>
+                      <a name="" id="" class="btn btn-success" href="{%  url 'formcompra' producto.id %}" role="button"> Comprar</a>
                   </td>
                 </tr>
 

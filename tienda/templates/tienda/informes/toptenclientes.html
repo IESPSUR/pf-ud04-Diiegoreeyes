@@ -13,13 +13,17 @@
                 </tr>
             </thead>
             <tbody>
-            {% for i in Clientes %}
+            {% for compra in comprastotal %}
                 <tr>
                     <td>
-                        {{ i.username }}
+                        {% for Cliente in Clientes %}
+                            {% if Cliente.id == compra.user %}
+                                {{ Cliente.username }}
+                            {% endif %}
+                        {% endfor %}
                     </td>
                     <td>
-                        {{ i.emailast_name }}
+                        {{ compra.sum_compras }}€
                     </td>
                 </tr>
             {% endfor %}
