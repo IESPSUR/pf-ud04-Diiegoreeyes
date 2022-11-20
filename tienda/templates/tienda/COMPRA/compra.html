@@ -3,6 +3,7 @@
 {% block content %}
 
     <div class="card">
+                <!-- Creamos tabla para que quede bonito -->
 
         <table class="table">
             <thead>
@@ -15,7 +16,7 @@
                 </tr>
             </thead>
             <tbody>
-
+                <!-- Recorremos todos los productos y creamos las casillas para las tablas-->
                 {% for producto in productocompra %}
                 <tr>
                   <td>{{ producto.id }}</td>

@@ -4,7 +4,13 @@
     <form method="get">
         {{ formulario }}
     </form>
+
+    <!-- Si existen productos -->
+
     {% if Productos %}
+
+        <!-- Creamos tabla para que quede bonito -->
+
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -18,6 +24,8 @@
                 <tr>
 
                     <td>
+                        <!-- Recorremos todos los productos -->
+                        <!-- Si el ID del producto que recorremoe es igual al id del modelo producto, lo imprimimos ( No produce producto cartesiano ) -->
                         {% for producto in Productos %}
                             {% if producto.id == Producto.producto %}
                                 {{ producto.nombre }}
@@ -25,7 +33,7 @@
                         {% endfor %}
                     </td>
                     <td>
-                            {{ Producto.sum_compras}}
+                        {{ Producto.sum_compras}}
                     </td>
 
                     <td>

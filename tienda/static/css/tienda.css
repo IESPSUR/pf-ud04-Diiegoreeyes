@@ -7,12 +7,28 @@
     font-family: 'ALL';
 }
 
+.btn-degrad{
+    background: linear-gradient(to bottom right, lightblue, lightseagreen);
+}
+.btn-degrad:hover{
+    background: linear-gradient(to bottom right, black, lightseagreen);
+    color: white;
+
+}
+h2{
+    color: lightblue;
+    font-weight: bold;
+}
+.titulo{
+    color: lightblue;
+    font-weight: bold;
+    font-size: 3em;
+}
 h1{
     text-align: center;
-    font-size: 5em;
 }
-a:hover{
-    color: black;
+.titulo:hover{
+    color: lightseagreen;
 }
 a{
     text-decoration: none;
@@ -20,7 +36,91 @@ a{
 .derecha{
     float: right;
 }
-ul li {
-    list-style-type: none;
+
+/* menu */
+
+#menu ul {
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding:0;
 }
 
+/* items del menu */
+
+ #menu ul li {
+    background: lightblue;
+    color: white;
+    font-weight: bold;
+}
+
+/* enlaces del menu */
+
+#menu ul a {
+     display:block;
+     color:#fff;
+     text-decoration:none;
+     font-weight:400;
+     font-size: 15px;
+     text-align: center;
+     padding:10px;
+     text-transform:uppercase;
+     letter-spacing:1px;
+}
+
+/* items del menu */
+
+#menu ul li {
+ position:relative;
+ float:left;
+ margin:0;
+ padding:0;
+}
+
+/* efecto al pasar el ratón por los items del menu */
+
+#menu ul li:hover {
+    background: linear-gradient(to bottom right, lightblue, lightseagreen);
+
+
+}
+#menu a:hover{
+    color: black;
+}
+
+/* menu desplegable */
+
+#menu ul ul {
+ display:none;
+ position:absolute;
+ top:100%;
+ left:0;
+ background:#eee;
+ padding:0;
+}
+
+/* items del menu desplegable */
+
+#menu ul ul li {
+ float:none;
+ width:150px
+}
+
+/* enlaces de los items del menu desplegable */
+
+#menu ul ul a {
+ line-height:120%;
+ padding:10px 15px;
+}
+
+/* items del menu desplegable al pasar el ratón */
+
+#menu ul li:hover > ul {
+ display:block;
+}
+
+
+.submenu{
+    font-size: 1em;
+}

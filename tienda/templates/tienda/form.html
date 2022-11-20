@@ -1,31 +1,38 @@
+
+
+<!-- Creamos formulario POST -->
+<!-- formulario para incluirlo en los CRUD -->
+
+<!-- Recoge el valor del campo y el nombre del campo -->
+
 <form enctype="multipart/form-data" method="post">
 
     {%  csrf_token %}
 
-  {% for i in formulario %}
+  {% for producto in formulario %}
 
-                {% if i.name != 'marca' %}
+                {% if producto.name != 'marca' %}
                     <div class="mb-3">
-                        <label for="" class="form-label">{{ i.label }}:</label>
+                        <label for="" class="form-label">{{ producto.label }}:</label>
 
                         <input
-                            type="{{ i.field.widget.input_type }}"
+                            type="{{ producto.field.widget.input_type }}"
                             class="form-control"
-                            name="{{ i.name }}"
+                            name="{{ producto.name }}"
                             id=""
                             aria-describedby="helpId"
-                            placeholder="{{ i.label }}"
-                            value="{{ i.value | default:'' }}"/>
+                            placeholder="{{ producto.label }}"
+                            value="{{ producto.value | default:'' }}"/>
                     </div>
-                    <div class="col-12 help-text">{{ i.errors }}</div>
+                    <div class="col-12 help-text">{{ producto.errors }}</div>
                 {% endif %}
-                {% if i.name == 'marca' %}
-                    <label for="" class="form-label">{{ i.label }}:</label>
+                {% if producto.name == 'marca' %}
+                    <label for="" class="form-label">{{ producto.label }}:</label>
                     {{ formulario.marca }}
                 {% endif %}
 
             {% endfor %}
-            <br></br>
+            <br>
     <input name="" id="" class="btn btn-success" type="submit" value="Enviar Información">
     <a name="" id="" class="btn btn-primary" href="{%  url 'listado' %}" role="button"> Cancelar</a>
 </form>

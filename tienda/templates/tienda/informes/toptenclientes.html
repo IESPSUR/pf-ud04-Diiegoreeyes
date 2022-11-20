@@ -4,7 +4,11 @@
     <form method="get">
         {{ formulario }}
     </form>
+    <!-- Si existen productos -->
+
     {% if Clientes %}
+        <!-- Creamos tabla para que quede bonito -->
+
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -16,6 +20,8 @@
             {% for compra in comprastotal %}
                 <tr>
                     <td>
+                        <!-- Recorremos todos los Clientes -->
+                        <!-- Si el ID del cliente que recorremoe es igual al id del modelo cliente, lo imprimimos ( No produce producto cartesiano ) -->
                         {% for Cliente in Clientes %}
                             {% if Cliente.id == compra.user %}
                                 {{ Cliente.username }}

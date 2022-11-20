@@ -2,17 +2,36 @@
 
 {% block content %}
     <div class="card-header derecha">
-            <a name="" id="" class="btn btn-success" href="{% url 'crearusuario' %}" role="button">Log Up</a>
-            <a name="" id="" class="btn btn-success" href="{% url 'iniciar_sesion' %}" role="button">Log In</a>
+            <a name="" id="" class="btn-degrad btn btn-success" href="{% url 'crearusuario' %}" role="button">Log Up</a>
+            <a name="" id="" class="btn-degrad btn btn-success" href="{% url 'iniciar_sesion' %}" role="button">Log In</a>
 
     </div>
 	<h2>Bienvenido a la tienda virtual</h2>
-	<ul>
-        <li> <a href=' {% url 'listado' %} '> Gestión de productos</a></li>
-        <li> <a href=' {% url 'informes' %} '> Informes</a></li>
-		<li><a href=' {% url 'listacompra' %} '> Realizar compra</a></li>
-	</ul>
 
+
+        <!-- MENU  -->
+
+
+        <!-- start nav -->
+        <nav id="menu">
+        <!-- start menu -->
+        <ul>
+         <li><a href=' {% url 'listado' %} '> Gestión de productos</a></li>
+         <li><a href=' {% url 'informes' %} '> Informes</a>
+        <!-- start menu desplegable -->
+         <ul>
+             <li><a href="{% url 'listado_marca' %}">Productos por marca</a></li>
+             <li><a href="{% url 'toptenproductos' %}">Top 10 productos</a></li>
+             <li><a href="{% url 'listado_usuario' %}">Compras de usuario</a></li>
+             <li><a href="{% url 'toptenclientes' %}">Top 10 clientes</a></li>
+         </ul>
+        <!-- end menu desplegable -->
+         </li>
+            <li><a href=' {% url 'listacompra' %} '> Realizar compra</a></li>
+        </ul>
+        <!-- end menu -->
+        </nav>
+        <!-- end nav -->
 
 
 {% endblock %}

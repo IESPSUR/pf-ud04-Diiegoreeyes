@@ -8,9 +8,12 @@
         </div>
 
         <div class="card-body">
+                <!-- Formulario para crear usuario -->
 
             <form method="post">
                 {% csrf_token %}
+                <!-- Le pasamos el formulario propio de Django que creamos en el view -->
+
                 {{ form }}
 
                 <input name="" id="" class="btn btn-success" type="submit" value="Registrar">

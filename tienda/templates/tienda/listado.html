@@ -4,6 +4,8 @@
         <div class="card-header">
             <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar producto</a>
         </div>
+         <!-- Creamos tabla para que quede bonito-->
+
         <table class="table">
             <thead>
                 <tr>
@@ -16,19 +18,20 @@
                 </tr>
             </thead>
             <tbody>
+                 <!-- recorremos los productos-->
 
-                {% for i in listadoprod %}
+                {% for producto in listadoprod %}
 
                 <tr>
-                  <td>{{ i.id }}</td>
-                  <td>{{ i.nombre }}</td>
-                  <td>{{ i.marca }}</td>
-                  <td>{{ i.unidades }}</td>
-                  <td>{{ i.precio }}€</td>
+                  <td>{{ producto.id }}</td>
+                  <td>{{ producto.nombre }}</td>
+                  <td>{{ producto.marca }}</td>
+                  <td>{{ producto.unidades }}</td>
+                  <td>{{ producto.precio }}€</td>
                   <td>
-                      <a class="btn btn-info" href="{% url 'editar' i.id %}" role="button">Editar</a>
+                      <a class="btn btn-info" href="{% url 'editar' producto.id %}" role="button">Editar</a>
                       |
-                       <a class="btn btn-danger" href="{%  url 'eliminar' i.id %}" role="button">Borrar</a>
+                       <a class="btn btn-danger" href="{%  url 'eliminar' producto.id %}" role="button">Borrar</a>
                   </td>
                 </tr>
 

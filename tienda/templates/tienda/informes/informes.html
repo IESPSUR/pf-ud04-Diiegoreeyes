@@ -1,10 +1,12 @@
 {% extends 'tienda/base.html' %}
 {% block content %}
     <h2>Informes</h2>
+    <nav id="menu">
     <ul>
         <li><a href="{% url 'listado_marca' %}">Productos por marca</a></li>
         <li><a href="{% url 'toptenproductos' %}">Top ten productos</a></li>
         <li><a href="{% url 'listado_usuario' %}">Compras de usuario</a></li>
         <li><a href="{% url 'toptenclientes' %}">Top ten mejores clientes</a></li>
     </ul>
+    </nav>
 {% endblock %}
