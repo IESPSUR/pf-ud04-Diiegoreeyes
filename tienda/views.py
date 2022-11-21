@@ -38,10 +38,13 @@ def crearusuario(request):
     if request.method == 'POST':
         # Usamos Un Form propio de django para crear usuario
         form = UserCreationForm(request.POST)
+        # Si es valido, creamos el usuario , nos logueamos y vamos al index
         if form.is_valid():
             user = form.save()
             login(request,user)
             return redirect(welcome)
+        else:
+            messages.error(request, 'Introduce credenciales válidos')
     form = UserCreationForm()
     return render(request,'tienda/COMPRA/crearusuario.html', {'form':form})
 
@@ -50,7 +53,7 @@ def iniciar_sesion(request):
     if request.method == 'POST':
         # Usamos Un Form propio de django para iniciar sesión
         form = AuthenticationForm(request, data=request.POST)
-        # Si es válido, recogemos los datos y se lo pasamos a user
+        # Si es válido, recogemos los datos y nos logueamos
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
@@ -60,9 +63,9 @@ def iniciar_sesion(request):
                 login(request,user)
                 return redirect(welcome)
             else:
-                messages.error(request,'Error en el inicio de sesión')
+                messages.error(request,'Las credenciales no son válidas')
         else:
-            messages.error(request,'Fallo en el inicio de sesión')
+            messages.error(request,'Las credenciales no son válidas')
     form = AuthenticationForm()
     return render(request, 'tienda/COMPRA/iniciar_sesion.html', {'form':form})
 
@@ -109,7 +112,10 @@ def formcompra(request, id):
 # CRUD #
 @staff_member_required
 def crear(request):
-    formulario = ProductoForm(request.POST or None, request.FILES or None)
+    """
+    Recogemos los datos del formulario producto y si es válido, lo guardamos
+    """
+    formulario = ProductoForm(request.POST or None,)
     if formulario.is_valid():
         formulario.save()
         return redirect('listado')
@@ -117,8 +123,9 @@ def crear(request):
 
 @staff_member_required
 def editar(request, id):
+    # Recogemos datos del formulario producto con un ID, ya que necesita que ese producto exista.
     Producto = producto.objects.get(id=id)
-    formulario = ProductoForm(request.POST or None, request.FILES or None, instance=Producto)
+    formulario = ProductoForm(request.POST or None,instance=Producto)
     if formulario.is_valid() and request.POST:
         formulario.save()
         return redirect('listado')

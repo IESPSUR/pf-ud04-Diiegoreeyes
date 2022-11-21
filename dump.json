@@ -1,0 +1,1036 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$lmIPQnpD3H4bC2nW9XgNTf$SNomGxMgBw8m6qo64Cj4p3SnwsFvRkvXKOCvlAb5g5Y=",
+    "last_login": "2022-11-21T08:21:52.517Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-11-21T07:28:55.659Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$2SwEHWgXXE8s1d3qtYkj5r$Zk0EPlLFTdlfAkiweeU4335FGTOrGJGL5p/Xcb1bZLs=",
+    "last_login": "2022-11-21T07:38:25.581Z",
+    "is_superuser": false,
+    "username": "diego",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-21T07:38:17.323Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$NySB3vjFjWwc84SWcLEBhS$w0pyPLFwwF7Uy8L/ijVTa+Es/egL+xIMrsl0s9sks3U=",
+    "last_login": "2022-11-21T07:49:23.915Z",
+    "is_superuser": false,
+    "username": "lolo",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-21T07:44:47.394Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$fzFeKqYxeLvPaWgGqi7Obx$C/DHSJ6dPxvRBLZhuY8FgbU4BhJdAYZlYjEMqGqNfQ0=",
+    "last_login": "2022-11-21T07:45:28.266Z",
+    "is_superuser": false,
+    "username": "edu",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-21T07:45:28.058Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$O3LM8r6psroic12mvEaSXR$BvuAM19CcA7q2hC/zUvO9kYg3vjQjMlV3FQ0WZSWtnw=",
+    "last_login": "2022-11-21T07:50:19.969Z",
+    "is_superuser": false,
+    "username": "toni",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-21T07:50:09.430Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$dGZDSWLVyZpgIDj0LHh1HW$LVKJmcw+xmiXHMiVp+blKu/tEgJs9jQ/XkMXPSIZRX8=",
+    "last_login": "2022-11-21T08:05:50.781Z",
+    "is_superuser": false,
+    "username": "pepito",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-11-21T08:05:50.599Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y009kyrggp210c5mlil6g70nxv2sq8nw",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSGF4SEu3fcbyAwMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxYXocTpdyNMD247yHdst1mmua3LRHJX5EG7HOfMz-vh_h1U7PVbJ0BKBZIKYAd2Hp3JaIiKKZoBPABZnaEMZ8NgyCqm4IID68gojV68P_YVN8U:1ox23s:ijgTCA6YxoJSDMMDoWUyQ7tbmrCCG_CP_YiDt0p60Mo",
+    "expire_date": "2022-12-05T08:21:52.520Z"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 1,
+  "fields": {
+    "nombre": "Zara"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 2,
+  "fields": {
+    "nombre": "FootLocker"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 3,
+  "fields": {
+    "nombre": "Adidas"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 4,
+  "fields": {
+    "nombre": "Google"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 5,
+  "fields": {
+    "nombre": "Facebook"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 6,
+  "fields": {
+    "nombre": "Samsung"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 7,
+  "fields": {
+    "nombre": "Apple"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 8,
+  "fields": {
+    "nombre": "Lanjaron"
+  }
+},
+{
+  "model": "tienda.marca",
+  "pk": 9,
+  "fields": {
+    "nombre": "Solar De Cabra"
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 1,
+  "fields": {
+    "nombre": "Chaqueton",
+    "modelo": "Chaqueton",
+    "unidades": 980,
+    "precio": 79,
+    "detalles": "Es bonita",
+    "marca": 1
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 2,
+  "fields": {
+    "nombre": "Sudadera",
+    "modelo": "Sudadera",
+    "unidades": 789,
+    "precio": 24,
+    "detalles": "Es bonita",
+    "marca": 2
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 3,
+  "fields": {
+    "nombre": "Iphone 11",
+    "modelo": "Movil",
+    "unidades": 1992,
+    "precio": 599,
+    "detalles": "Movil bueno",
+    "marca": 7
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 4,
+  "fields": {
+    "nombre": "Iphone 12",
+    "modelo": "Movil",
+    "unidades": 195,
+    "precio": 699,
+    "detalles": "Movil bueno",
+    "marca": 7
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 5,
+  "fields": {
+    "nombre": "Samsung A30",
+    "modelo": "Movil",
+    "unidades": 794,
+    "precio": 899,
+    "detalles": "Movil bueno",
+    "marca": 6
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 6,
+  "fields": {
+    "nombre": "Yeezy",
+    "modelo": "Zapato",
+    "unidades": 992,
+    "precio": 300,
+    "detalles": "yeezy",
+    "marca": 2
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 7,
+  "fields": {
+    "nombre": "Botella de agua",
+    "modelo": "Comida",
+    "unidades": 9594,
+    "precio": 1,
+    "detalles": "Comida",
+    "marca": 8
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 8,
+  "fields": {
+    "nombre": "Agua",
+    "modelo": "Comida",
+    "unidades": 9949,
+    "precio": 2,
+    "detalles": "Agua muy buena",
+    "marca": 9
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 9,
+  "fields": {
+    "nombre": "Gorro",
+    "modelo": "Ropa",
+    "unidades": 250,
+    "precio": 19,
+    "detalles": "Es bonito",
+    "marca": 1
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 10,
+  "fields": {
+    "nombre": "Vaqueros Rotos",
+    "modelo": "Ropa",
+    "unidades": 280,
+    "precio": 39,
+    "detalles": "Es bonito",
+    "marca": 1
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 11,
+  "fields": {
+    "nombre": "Reloj",
+    "modelo": "Accesorio",
+    "unidades": 347,
+    "precio": 8,
+    "detalles": "Reloj bonito",
+    "marca": 1
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 12,
+  "fields": {
+    "nombre": "Botella 2L",
+    "modelo": "Comida",
+    "unidades": 2000,
+    "precio": 4,
+    "detalles": "Comida buena",
+    "marca": 9
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 13,
+  "fields": {
+    "nombre": "Garrafa 5L",
+    "modelo": "Comida",
+    "unidades": 390,
+    "precio": 4,
+    "detalles": "Comida buena",
+    "marca": 8
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 14,
+  "fields": {
+    "nombre": "SuperStar",
+    "modelo": "Zapato",
+    "unidades": 400,
+    "precio": 45,
+    "detalles": "Esta guay",
+    "marca": 3
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 15,
+  "fields": {
+    "nombre": "Adidas Runing",
+    "modelo": "Zapato",
+    "unidades": 299,
+    "precio": 69,
+    "detalles": "Esta guay",
+    "marca": 3
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 16,
+  "fields": {
+    "nombre": "Iphone 13",
+    "modelo": "Movil",
+    "unidades": 20000,
+    "precio": 799,
+    "detalles": "Movil bueno",
+    "marca": 7
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 17,
+  "fields": {
+    "nombre": "Iphone 14 Pro",
+    "modelo": "Movil",
+    "unidades": 999,
+    "precio": 1100,
+    "detalles": "Movil bueno",
+    "marca": 7
+  }
+},
+{
+  "model": "tienda.producto",
+  "pk": 18,
+  "fields": {
+    "nombre": "Botella 0,50L",
+    "modelo": "Comida",
+    "unidades": 1500,
+    "precio": 1,
+    "detalles": "Comida buena",
+    "marca": 9
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 1,
+  "fields": {
+    "producto": 5,
+    "unidades": 3,
+    "importe": "2697.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "diego"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 2,
+  "fields": {
+    "producto": 3,
+    "unidades": 1,
+    "importe": "599.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "diego"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 3,
+  "fields": {
+    "producto": 2,
+    "unidades": 4,
+    "importe": "96.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "diego"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 4,
+  "fields": {
+    "producto": 3,
+    "unidades": 5,
+    "importe": "2995.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 5,
+  "fields": {
+    "producto": 1,
+    "unidades": 3,
+    "importe": "237.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "edu"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 6,
+  "fields": {
+    "producto": 4,
+    "unidades": 2,
+    "importe": "1398.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "edu"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 7,
+  "fields": {
+    "producto": 3,
+    "unidades": 1,
+    "importe": "599.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "edu"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 8,
+  "fields": {
+    "producto": 6,
+    "unidades": 6,
+    "importe": "1800.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "edu"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 9,
+  "fields": {
+    "producto": 7,
+    "unidades": 400,
+    "importe": "400.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 10,
+  "fields": {
+    "producto": 6,
+    "unidades": 1,
+    "importe": "300.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 11,
+  "fields": {
+    "producto": 2,
+    "unidades": 3,
+    "importe": "72.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 12,
+  "fields": {
+    "producto": 1,
+    "unidades": 1,
+    "importe": "79.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 13,
+  "fields": {
+    "producto": 8,
+    "unidades": 46,
+    "importe": "92.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 14,
+  "fields": {
+    "producto": 2,
+    "unidades": 2,
+    "importe": "48.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 15,
+  "fields": {
+    "producto": 1,
+    "unidades": 1,
+    "importe": "79.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 16,
+  "fields": {
+    "producto": 4,
+    "unidades": 1,
+    "importe": "699.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 17,
+  "fields": {
+    "producto": 3,
+    "unidades": 1,
+    "importe": "599.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 18,
+  "fields": {
+    "producto": 5,
+    "unidades": 1,
+    "importe": "899.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 19,
+  "fields": {
+    "producto": 7,
+    "unidades": 3,
+    "importe": "3.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 20,
+  "fields": {
+    "producto": 8,
+    "unidades": 2,
+    "importe": "4.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "lolo"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 21,
+  "fields": {
+    "producto": 1,
+    "unidades": 2,
+    "importe": "158.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "toni"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 22,
+  "fields": {
+    "producto": 2,
+    "unidades": 2,
+    "importe": "48.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "toni"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 23,
+  "fields": {
+    "producto": 4,
+    "unidades": 2,
+    "importe": "1398.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "toni"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 24,
+  "fields": {
+    "producto": 7,
+    "unidades": 3,
+    "importe": "3.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "toni"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 25,
+  "fields": {
+    "producto": 8,
+    "unidades": 3,
+    "importe": "6.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "toni"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 26,
+  "fields": {
+    "producto": 6,
+    "unidades": 1,
+    "importe": "300.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "toni"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 27,
+  "fields": {
+    "producto": 1,
+    "unidades": 2,
+    "importe": "158.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "pepito"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 28,
+  "fields": {
+    "producto": 5,
+    "unidades": 2,
+    "importe": "1798.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "pepito"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 29,
+  "fields": {
+    "producto": 11,
+    "unidades": 3,
+    "importe": "24.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "pepito"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 30,
+  "fields": {
+    "producto": 17,
+    "unidades": 1,
+    "importe": "1100.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "pepito"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 31,
+  "fields": {
+    "producto": 15,
+    "unidades": 1,
+    "importe": "69.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "pepito"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 32,
+  "fields": {
+    "producto": 1,
+    "unidades": 2,
+    "importe": "158.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "tienda.compra",
+  "pk": 33,
+  "fields": {
+    "producto": 1,
+    "unidades": 9,
+    "importe": "711.00",
+    "fecha": "2022-11-20T23:00:00Z",
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-11-21T07:29:30.325Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "1",
+    "object_repr": "Zara",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-11-21T07:29:32.744Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "2",
+    "object_repr": "FootLocker",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-11-21T07:29:34.707Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "3",
+    "object_repr": "Adidad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-11-21T07:29:46.128Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "4",
+    "object_repr": "Google",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-11-21T07:29:52.240Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "5",
+    "object_repr": "Facebook",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-11-21T07:30:01.392Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "6",
+    "object_repr": "Samsung",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-11-21T07:30:04.625Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "7",
+    "object_repr": "Apple",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-11-21T07:30:25.146Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "producto"
+    ],
+    "object_id": "1",
+    "object_repr": "Chaqueton Zara",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-11-21T07:47:00.954Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "8",
+    "object_repr": "Lanjaron",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-11-21T07:48:27.126Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "9",
+    "object_repr": "Solar De Cabra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-11-21T07:53:38.592Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "marca"
+    ],
+    "object_id": "3",
+    "object_repr": "Adidas",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Nombre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-11-21T08:23:10.421Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "tienda",
+      "producto"
+    ],
+    "object_id": "14",
+    "object_repr": "SuperStar Adidas",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+}
+]

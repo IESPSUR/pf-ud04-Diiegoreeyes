@@ -12,7 +12,7 @@
 }
 .btn-degrad:hover{
     background: linear-gradient(to bottom right, black, lightseagreen);
-    color: white;
+    color: black;
 
 }
 h2{
@@ -59,9 +59,10 @@ a{
 
 #menu ul a {
      display:block;
-     color:#fff;
+     color: white;
      text-decoration:none;
-     font-weight:400;
+     text-shadow: 1px 1px black;
+     font-weight:bold;
      font-size: 15px;
      text-align: center;
      padding:10px;
@@ -87,6 +88,8 @@ a{
 }
 #menu a:hover{
     color: black;
+    text-shadow: 0px 0px black;
+
 }
 
 /* menu desplegable */
